@@ -78,6 +78,14 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Mouse buttons
+(map! :n [mouse-8] #'better-jumper-jump-backward
+      :n [mouse-9] #'better-jumper-jump-forward)
+
+;; font
+(setq doom-font (font-spec :family "JuliaMono" :size 14)
+      doom-variable-pitch-font (font-spec :family "Overpass" :size 14))
+
 (use-package! websocket
     :after org-roam)
 
